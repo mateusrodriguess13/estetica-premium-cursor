@@ -1,0 +1,42 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-space-grotesk);
+
+  --color-matte-black: #0F0F11;
+  --color-dark-gray: #1A1A1D;
+  --color-silver: #E2E2E2;
+  --color-accent-blue: #3E8ED0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-matte-black text-silver font-sans antialiased;
+}
+
+/* Hide scrollbar for cleaner look */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-matte-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-silver to-gray-500;
+}
